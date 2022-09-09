@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'MyFont'; 
+    src: url('IBMPlexSans-Regular.ttf');
+}
+
+body {
+    /*margin: 10%;
+    overflow-x: hidden;
+    text-align: center;
+    font-size: 2.5rem;*/
+    font-family: "MyFont";
+    background-color: #D8DEE9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "MyFont";
+    text-align: center;
+}
