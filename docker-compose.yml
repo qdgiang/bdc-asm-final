@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+  web:
+    image: qdgiang/asm-demo:v1
+    container_name: web-demo
+    ports:
+      - "7778:8050"
+    restart: unless-stopped
