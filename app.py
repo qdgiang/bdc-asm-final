@@ -58,6 +58,8 @@ studentOneSemHover = {
     'TKET': True,
 }
 app = Dash(__name__)
+app.title = "HCMUT Grade Analysis"
+app._favicon = "favicon.png"
 server = app.server
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
@@ -68,7 +70,7 @@ app.layout = html.Div(
         html.Div(
             children=[
                 html.H1(
-                    children='HCMUT Student Score Dashboard',
+                    children='HCMUT Student Grade Dashboard',
                     style={
                         'textAlign': 'center',
                         #'background': colors["yellow"]
@@ -371,4 +373,4 @@ def grade_cluster_graph(major, subject, semester):
     return fig
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host='0.0.0.0', port=8050)
+    app.run_server(debug=False, host='0.0.0.0', port=8050)

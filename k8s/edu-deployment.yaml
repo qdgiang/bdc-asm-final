@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bdc-asm-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bdc-asm
+  template:
+    metadata:
+      name: bdc-asm-pod
+      labels:
+        app: bdc-asm
+    spec:
+      containers:
+      - name: asm-container
+        image: qdgiang/asm-demo
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
