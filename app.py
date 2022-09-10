@@ -285,7 +285,7 @@ def student_history_graph(student_id, student_semester):
 def subject_histogram(major, subject, semester):
     filtered_df = df[(df.F_TENNGVN == major) & (df.F_TENMHVN == subject)]
     if semester == "All semesters":
-        chart_title = "Grade histogram of " + subject + " in " + major
+        chart_title = "Grade histogram of " + subject + " in semester" + major
         fig = px.histogram(filtered_df, x="TKET", color="NHHK", range_x=[0, 10], nbins=20, title=chart_title, labels=global_labels)
         # add a dot line to show the passing grade is 5
         fig.update_layout(transition_duration=500)

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: asm-container
-        image: qdgiang/asm-demo
-        imagePullPolicy: Never
+        image: qdgiang/asm-demo:v1
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
